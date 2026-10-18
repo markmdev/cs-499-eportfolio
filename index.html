@@ -1,116 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="markmdev's Computer Science ePortfolio: an Android inventory application and planned capstone enhancements in software engineering, algorithms, and databases.">
-  <title>markmdev | Computer Science ePortfolio</title>
-  <style>
-    :root { color-scheme: light; --ink: #172234; --muted: #536175; --blue: #1747bf; --line: #dce2eb; --paper: #f7f9fc; }
-    * { box-sizing: border-box; }
-    html { scroll-padding-top: 2rem; }
-    body { margin: 0; color: var(--ink); background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.65; }
-    a { color: var(--blue); text-underline-offset: .25em; }
-    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
-    .skip { position: absolute; top: .5rem; left: 1rem; padding: .5rem 1rem; background: #fff; transform: translateY(-200%); }
-    .skip:focus { transform: translateY(0); }
-    .wrap { width: min(1100px, calc(100% - 5rem)); margin-inline: auto; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.6rem; border-bottom: 1px solid var(--line); }
-    .site-name { font-size: .95rem; font-weight: 650; letter-spacing: -.01em; }
-    nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; }
-    nav a { color: var(--muted); text-decoration: none; }
-    nav a:hover { color: var(--blue); text-decoration: underline; }
-    .intro { padding-block: 3.3rem 3rem; }
-    .eyebrow { margin: 0 0 .8rem; color: var(--blue); font-size: .85rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
-    h1 { margin: 0; font-size: clamp(2.6rem, 5.6vw, 4.5rem); font-weight: 650; line-height: 1.08; letter-spacing: -.055em; }
-    .intro p:last-child { max-width: 650px; margin: 1.2rem 0 0; color: var(--muted); font-size: 1.15rem; }
-    .project { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 2rem; background: var(--paper); border-left: 3px solid var(--blue); }
-    h2 { margin: 0; font-size: 1.05rem; font-weight: 650; line-height: 1.45; }
-    .section-note { margin: .5rem 0 0; color: var(--muted); font-size: .9rem; }
-    .project h3 { margin: 0 0 .55rem; font-size: 1.6rem; font-weight: 600; letter-spacing: -.025em; line-height: 1.3; }
-    .project p { margin: 0; }
-    .project .technology { margin-top: 1rem; color: var(--blue); font-size: .9rem; font-weight: 550; }
-    .plan { padding-block: 2.4rem 2rem; }
-    .plan-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem 1rem; margin-bottom: 1.25rem; }
-    .plan-heading p { margin: 0; color: var(--muted); font-size: .9rem; }
-    .enhancements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    .enhancements article { border-top: 1px solid var(--line); padding-top: 1rem; }
-    .number { color: var(--blue); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .85rem; }
-    .enhancements h3 { margin: .5rem 0 .55rem; font-size: 1.05rem; font-weight: 650; line-height: 1.4; }
-    .enhancements p { margin: 0; color: var(--muted); }
-    footer { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.3rem 1.8rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-    footer p { margin: 0; }
-    .stage { color: var(--blue); }
-    @media (max-width: 700px) {
-      .wrap { width: calc(100% - 2.5rem); }
-      header { align-items: flex-start; flex-direction: column; gap: .65rem; padding-block: 1.2rem; }
-      .intro { padding-block: 2.5rem; }
-      .project { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.5rem; }
-      .enhancements { grid-template-columns: 1fr; gap: 1.4rem; }
-      footer { flex-direction: column; gap: .25rem; }
-    }
-  </style>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="wrap">
-    <header>
-      <span class="site-name">Computer Science ePortfolio</span>
-      <nav aria-label="Main navigation">
-        <a href="#project">Selected project</a>
-        <a href="#enhancements">Enhancement plan</a>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="intro" aria-labelledby="name">
-        <p class="eyebrow">CS-499 · Computer Science Capstone</p>
-        <h1 id="name">markmdev</h1>
-        <p>This portfolio begins with an Android inventory application from CS-360. The capstone will extend its design, restocking logic, and database.</p>
-      </section>
-      <section class="project" id="project" aria-labelledby="project-heading">
-        <div>
-          <h2 id="project-heading">Selected project</h2>
-          <p class="section-note">CS-360 coursework</p>
-        </div>
-        <div>
-          <h3>Inventory Tracker</h3>
-          <p>An Android application for managing inventory items, updating stock quantities, and identifying low-stock items. A local SQLite database preserves inventory between sessions.</p>
-          <p class="technology">Android · Java · SQLite</p>
-        </div>
-      </section>
-      <section class="plan" id="enhancements" aria-labelledby="plan-heading">
-        <div class="plan-heading">
-          <h2 id="plan-heading">Planned enhancements</h2>
-          <p>Initial direction for the capstone</p>
-        </div>
-        <div class="enhancements">
-          <article>
-            <span class="number" aria-hidden="true">01</span>
-            <h3>Software design &amp; engineering</h3>
-            <p>Add a stock-adjustment workflow with validation, preview, and confirmation, separating application rules from screen code.</p>
-          </article>
-          <article>
-            <span class="number" aria-hidden="true">02</span>
-            <h3>Algorithms &amp; data structures</h3>
-            <p>Develop a restock-priority algorithm with explicit ordering rules and consistent handling of ties.</p>
-          </article>
-          <article>
-            <span class="number" aria-hidden="true">03</span>
-            <h3>Databases</h3>
-            <p>Add stock-movement history, keep each history entry and quantity update in one transaction, and migrate existing inventory data.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>markmdev · CS-499</p>
-      <p class="stage">Portfolio development · Module One</p>
-    </footer>
-    <details style="margin-bottom: 2rem; color: var(--muted); font-size: .85rem;">
-      <summary>AI use</summary>
-      <p>OpenAI Codex (GPT-6 Astra) drafted this page's text, layout, and initial enhancement outline. The enhancements described above are planned work.</p>
-      <p>OpenAI. (2026). <em>Codex (GPT-6 Astra)</em> [Generative AI software]. <a href="https://openai.com/codex/">OpenAI Codex</a>.</p>
-    </details>
-  </div>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="markmdev — software engineering portfolio. Android design, algorithms, and databases with inspectable evidence."><title>Professional self-assessment · markmdev</title><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="nav"><a class="brand" href="index.html">markmdev<span aria-hidden="true" style="color:#08655e"> /</span></a><nav aria-label="Main"><a href="index.html#assessment">Self-assessment</a><a href="project.html">Inventory Tracker</a><a href="source.html">Source</a><a href="review.html">Code review</a></nav></div></header><main id="main"><section class="intro"><p class="eyebrow">Computer Science · CS-499</p><h1>Software you can inspect,<br>decisions you can explain.</h1><p class="lead">I'm markmdev, a software engineer interested in application APIs and AI agents. This portfolio follows one Android application from immediate stock edits to reviewed, prioritized, recorded changes.</p><a class="button primary" href="project.html">Explore Inventory Tracker →</a><a class="button" href="review.html">Watch the code review</a></section><section id="assessment" class="reading"><p class="eyebrow">Professional self-assessment</p><h1>Professional Self Assessment</h1>
+<p>markmdev | CS-499 | October 18, 2026</p>
+<h2>The kind of engineer I want to be</h2>
+<p>I started programming because I wanted to make games. I still enjoy getting a feature to work, but the Computer Science program has changed what I consider finished. A working screen is only part of the result. I also need to explain the design, understand its costs, and show what happens when input is wrong or an operation fails. That is the direction of this portfolio: taking a small inventory application and making its behavior easier to review and trust.</p>
+<p>I work as a software engineer at a startup, primarily with JavaScript, TypeScript, and Python. My interests are application APIs and AI agents, with architecture and technical leadership as longer-term goals. The degree has helped connect that practical background to more deliberate analysis. I am more employable when I can defend a choice with evidence and explain its limits, rather than only demonstrate the successful path. Preparing this portfolio made me apply that standard to my own work.</p>
+<h2>Making decisions other people can review</h2>
+<p>My coursework has given me practice explaining technical choices to people approaching the same problem differently. In a CS-300 discussion about inventory data structures, I responded to a proposed vector by asking which operation mattered most: looking up one product by serial number or displaying an ordered list. That changed the comparison from a preference for a container to a question about the user&#x27;s work. A hash table helps frequent lookups, while ordered output introduces another cost. This is the kind of discussion I want to contribute in a team: establish the requirement, make the tradeoff visible, and leave room for a different answer when the requirement changes.</p>
+<p>These were individual assignments and peer discussions, not a shared production project. I do not present them as proof that I led a development team. They did teach me useful collaboration habits. A reviewer needs enough context to disagree productively. For this capstone, I preserved the baseline, separated the enhancements into reviewable milestones, documented setup and failure behavior, and recorded a code review before implementation. A teammate can compare the plan with the result instead of reconstructing the intent from a finished application.</p>
+<p>Communication also changes with the audience. My CS-340 animal-shelter dashboard connected MongoDB queries to rescue-category filters, a data table, a map, and a breed chart. A user needs to understand what a filter changes; a developer needs to understand the query and callbacks behind it. That project made the connection between database structure and the information a stakeholder can actually use much clearer to me. In this portfolio, short before-and-after explanations introduce each feature, while source files, measurements, and narratives provide the technical detail.</p>
+<h2>Applying theory to working software</h2>
+<p>CS-300 gave me a concrete reason to compare data structures before implementing one. The course-advising project considered vectors, hash tables, and binary search trees, then used a hash table for course lookup with separate sorted output. The important lesson was to account for the whole workflow. Fast lookup does not make file validation or sorting free. I carried that distinction into the capstone benchmark, which measures selection after data is loaded and does not claim to measure database or screen performance.</p>
+<p>Software engineering and databases came together in CS-340, where a reusable Python CRUD module separated database access from the dashboard. Maintaining that boundary makes a change easier to reason about. The capstone extends the same idea in Android: the Activity renders the interface, the ViewModel owns operation state, and the database helper owns persistence. The question is not just where to put a method. It is which layer can decide whether a requested change is still valid and whether it actually committed.</p>
+<p>CS-305 helped me approach security as an examination of concrete failure paths. The Artemis Financial vulnerability assessment considered code-level weaknesses as well as dependencies, and the later work used HTTPS and checksum verification. Those exercises made me more careful about what a security claim proves. A checksum does not establish authorization, and a scanner does not decide whether every reported issue is exploitable. In the inventory app, parameterized access, validated quantities, stale-preview rejection, and rollback tests protect specific operations. The app still has shared local inventory, no employee roles, and no tamper-proof audit log. Naming those boundaries is part of the security work.</p>
+<h2>How the portfolio fits together</h2>
+<p>The technical artifact is Inventory Tracker, a Java Android app created for CS-360 in August 2026. I chose one application so that each enhancement had to work with the others. The original source and the cumulative enhanced version are available together. The code-review video explains the original behavior and planned changes; the three narratives explain what I implemented and learned.</p>
+<p>The software-design enhancement replaces immediate quantity changes with a reason, preview, and confirmation. It handles cancellation, repeated confirmation, obsolete quantities, and screen recreation. The algorithms enhancement adds a bounded-heap restock shortlist with exact ratio comparisons and an independently checked full-sort alternative. The database enhancement stores stock changes and their explanations in one transaction, preserves existing records during migration, and retains movement snapshots when an item is deleted.</p>
+<p>The final milestone verification records nine unit tests and twenty Android tests. A deliberately rejected history insert leaves both stock and history unchanged; the ranking comparison also shows where full sorting is faster than the heap. Those results matter more to me than claiming one solution always wins. The instructor&#x27;s feedback on the code review and all three enhancements requested no corrections, so I retained their technical scope and used the final assembly to make the relationship between design, algorithms, and persistence easier to follow.</p>
+<p>I want to keep building systems whose behavior can be explained at that level. My next growth area is applying these habits in larger shared systems, where authorization, concurrent users, and operational recovery add problems this local app does not solve. This portfolio shows the foundation I can bring: practical implementation, explicit tradeoffs, and evidence that another developer can inspect.</p>
+<h2>AI use acknowledgement</h2>
+<p>OpenAI Codex with GPT-6 Astra assisted with drafting and checking this self-assessment against my saved coursework and capstone evidence. Prompts requested concrete program examples, accurate limits on collaboration claims, and a clear introduction to the three enhancements. Claude provided general presentation advice for the portfolio. The milestone narratives and source retain their own assistance disclosures (Anthropic, 2026; OpenAI, 2026).</p>
+<h2>References</h2>
+<p>Anthropic. (2026). <em>Claude</em> [Generative AI software]. <a href="https://claude.ai/">https://claude.ai/</a></p>
+<p>OpenAI. (2026). <em>Codex (GPT-6 Astra)</em> [AI coding agent]. <a href="https://openai.com/codex/">https://openai.com/codex/</a></p><a class="button" href="downloads/self-assessment.docx">Download self-assessment · Word</a></section></main><footer>markmdev · Computer Science ePortfolio · October 2026<br>Original coursework and cumulative enhancements. AI assistance is disclosed in the narratives and source documentation.</footer></body></html>

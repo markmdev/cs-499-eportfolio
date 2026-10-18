@@ -1,0 +1,3 @@
+Injected BEFORE INSERT trigger rejected stock_movements write after quantity update.
+Quantity remained10; history remained empty.
+After trigger removal, same adjustment produced quantity15 and exactly one movement.

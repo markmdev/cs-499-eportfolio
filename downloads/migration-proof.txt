@@ -1,0 +1,5 @@
+Populated schema v1 -> v2
+Account id 7 preserved; case-insensitive authentication passed; wrong password rejected.
+Inventory id42 Existing cable / OLD-42 / quantity17 / threshold4 preserved.
+No historical movement fabricated. Foreign keys enabled.
+First post-upgrade adjustment:17 -3 =14; exactly one movement.

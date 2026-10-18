@@ -1,0 +1,8 @@
+Indexed query:
+SEARCH stock_movements USING INDEX movement_item_time (item_id=?)
+
+Index removed only in disposable test database:
+SCAN stock_movements
+USE TEMP B-TREE FOR ORDER BY
+
+Three tied-timestamp rows returned in descending movement-ID order; other item excluded.
